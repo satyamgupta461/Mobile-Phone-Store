@@ -1,0 +1,704 @@
+{
+	"info": {
+		"_postman_id": "99e85d3a-175b-4e0c-b610-53d78d255504",
+		"name": "Mobile-Store-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22819025"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44312/api/MobileAccountReport?month=8&year=2022",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData.totalProductSale).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.totalProductSaleAmount).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.totalProductCostAmount).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.totalProfitLoss).to.be.a(\"string\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44312/api/MobileAccountReport?month=8&year=2022",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"MobileAccountReport"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "8"
+						},
+						{
+							"key": "year",
+							"value": "2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44312/api/MobileAPI?from=2022-09-01T07%3A17%3A55.158Z&to=2022-09-05T07%3A17%3A55.158Z",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"  pm.expect(jsonData).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData.id).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.mobileName).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.mobileBrand).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.costPrice).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.mrp).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.discount).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.sellingDate).to.be.a(\"string\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44312/api/MobileAPI?from=2022-09-01T07%3A17%3A55.158Z&to=2022-09-05T07%3A17%3A55.158Z",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"MobileAPI"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2022-09-01T07%3A17%3A55.158Z"
+						},
+						{
+							"key": "to",
+							"value": "2022-09-05T07%3A17%3A55.158Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44312/api/MobileAPI?from=2022-09-01T07%3A17%3A55.158Z&to=2022-09-05T07%3A17%3A55.158Z",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"  //pm.expect(jsonData).to.be.an(\"array\");\r",
+							"  pm.expect(jsonData.id).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.mobileName).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.mobileBrand).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.costPrice).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.mrp).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.discount).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.sellingDate).to.be.a(\"string\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44312/api/MobileAPI?from=2022-09-01T07%3A17%3A55.158Z&to=2022-09-05T07%3A17%3A55.158Z",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"MobileAPI"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2022-09-01T07%3A17%3A55.158Z"
+						},
+						{
+							"key": "to",
+							"value": "2022-09-05T07%3A17%3A55.158Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44312/api/MobileAPI?from=2022-09-01T07%3A17%3A55.158Z&to=2022-09-05T07%3A17%3A55.158Z",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"  //pm.expect(jsonData).to.be.an(\"array\");\r",
+							"  pm.expect(jsonData.id).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.mobileName).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.mobileBrand).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.costPrice).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.mrp).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.discount).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.sellingDate).to.be.a(\"string\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44312/api/MobileAPI?from=2022-09-01T07%3A17%3A55.158Z&to=2022-09-05T07%3A17%3A55.158Z",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"MobileAPI"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2022-09-01T07%3A17%3A55.158Z"
+						},
+						{
+							"key": "to",
+							"value": "2022-09-05T07%3A17%3A55.158Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44312/api/MobileAPI?from=2022-09-01T07%3A17%3A55.158Z&to=2022-09-05T07%3A17%3A55.158Z",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"   //pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   pm.expect(jsonData[0].id).to.be.a(\"number\");\r",
+							"   pm.expect(jsonData[0].mobileName).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData[0].mobileBrand).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData[0].costPrice).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData[0].mrp).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData[0].discount).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData[0].sellingDate).to.be.a(\"string\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44312/api/MobileAPI?from=2022-09-01T07%3A17%3A55.158Z&to=2022-09-05T07%3A17%3A55.158Z",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"MobileAPI"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2022-09-01T07%3A17%3A55.158Z"
+						},
+						{
+							"key": "to",
+							"value": "2022-09-05T07%3A17%3A55.158Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44312/api/MobileBrandWise?brand=Iphone&from=2022-08-01T08%3A28%3A08.606Z&to=2022-08-19T08%3A28%3A08.606Z",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"   //pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   pm.expect(jsonData[0].id).to.be.a(\"number\");\r",
+							"   pm.expect(jsonData[0].mobileName).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData[0].mobileBrand).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData[0].costPrice).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData[0].mrp).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData[0].discount).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData[0].sellingDate).to.be.a(\"string\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44312/api/MobileBrandWise?brand=Iphone&from=2022-08-01T08%3A28%3A08.606Z&to=2022-08-19T08%3A28%3A08.606Z",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"MobileBrandWise"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "Iphone"
+						},
+						{
+							"key": "from",
+							"value": "2022-08-01T08%3A28%3A08.606Z"
+						},
+						{
+							"key": "to",
+							"value": "2022-08-19T08%3A28%3A08.606Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44312/api/MobileBrandWise?brand=Iphone&from=2022-08-01T08%3A28%3A08.606Z&to=2022-08-19T08%3A28%3A08.606Z",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"   pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   pm.expect(jsonData[0].id).to.be.a(\"number\");\r",
+							"   pm.expect(jsonData[0].mobileName).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData[0].mobileBrand).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData[0].costPrice).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData[0].mrp).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData[0].discount).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData[0].sellingDate).to.be.a(\"string\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44312/api/MobileBrandWise?brand=Iphone&from=2022-08-01T08%3A28%3A08.606Z&to=2022-08-19T08%3A28%3A08.606Z",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"MobileBrandWise"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "Iphone"
+						},
+						{
+							"key": "from",
+							"value": "2022-08-01T08%3A28%3A08.606Z"
+						},
+						{
+							"key": "to",
+							"value": "2022-08-19T08%3A28%3A08.606Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44312/api/Mobile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44312/api/Mobile",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"Mobile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44312/api/Mobile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"   pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44312/api/Mobile",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"Mobile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44312/api/Mobile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"   pm.expect(jsonData).to.be.an(\"array\");\r",
+							"   });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44312/api/Mobile",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"Mobile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44312/api/Mobile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 23,\r\n  \"mobileName\": \"Iphone 15\",\r\n  \"mobileBrand\": \"Iphone\",\r\n  \"costPrice\": 150000,\r\n  \"mrp\": 200000,\r\n  \"discount\": 15,\r\n  \"sellingDate\": \"2022-07-16T08:38:53.030Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44312/api/Mobile",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"Mobile"
+					],
+					"query": [
+						{
+							"key": "{",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "\"id\"",
+							"value": " 23,",
+							"disabled": true
+						},
+						{
+							"key": "\"mobileName\"",
+							"value": " \"Iphone 15\",",
+							"disabled": true
+						},
+						{
+							"key": "\"mobileBrand\"",
+							"value": " \"Iphone\",",
+							"disabled": true
+						},
+						{
+							"key": "\"costPrice\"",
+							"value": " 150000,",
+							"disabled": true
+						},
+						{
+							"key": "\"mrp\"",
+							"value": " 200000,",
+							"disabled": true
+						},
+						{
+							"key": "\"discount\"",
+							"value": " 15,",
+							"disabled": true
+						},
+						{
+							"key": "\"sellingDate\"",
+							"value": " \"2022-07-16T08:38:53.030Z\"",
+							"disabled": true
+						},
+						{
+							"key": "}",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44312/api/Mobile/23",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 23,\r\n  \"mobileName\": \"Iphone 8\",\r\n  \"mobileBrand\": \"Iphone\",\r\n  \"costPrice\": 150000,\r\n  \"mrp\": 200000,\r\n  \"discount\": 15,\r\n  \"sellingDate\": \"2022-07-16T08:44:48.970Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44312/api/Mobile/23",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"Mobile",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44312/api/Mobile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 23,\r\n  \"mobileName\": \"Iphone 15\",\r\n  \"mobileBrand\": \"Iphone\",\r\n  \"costPrice\": 150000,\r\n  \"mrp\": 200000,\r\n  \"discount\": 15,\r\n  \"sellingDate\": \"2022-07-16T08:38:53.030Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44312/api/Mobile",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44312",
+					"path": [
+						"api",
+						"Mobile"
+					],
+					"query": [
+						{
+							"key": "{",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "\"id\"",
+							"value": " 23,",
+							"disabled": true
+						},
+						{
+							"key": "\"mobileName\"",
+							"value": " \"Iphone 15\",",
+							"disabled": true
+						},
+						{
+							"key": "\"mobileBrand\"",
+							"value": " \"Iphone\",",
+							"disabled": true
+						},
+						{
+							"key": "\"costPrice\"",
+							"value": " 150000,",
+							"disabled": true
+						},
+						{
+							"key": "\"mrp\"",
+							"value": " 200000,",
+							"disabled": true
+						},
+						{
+							"key": "\"discount\"",
+							"value": " 15,",
+							"disabled": true
+						},
+						{
+							"key": "\"sellingDate\"",
+							"value": " \"2022-07-16T08:38:53.030Z\"",
+							"disabled": true
+						},
+						{
+							"key": "}",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
